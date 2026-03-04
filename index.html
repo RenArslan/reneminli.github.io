@@ -18,21 +18,17 @@
 }
 /* PHOTO */
 .profile-photo{
-  position:absolute;
-  right:40px;
-  top:118px;
-  z-index:2;
+  margin-right:20px;
 }
 
 .profile-photo img{
-  width:150px;
-  height:150px;
+  width:180px;
+  height:180px;
   border-radius:50%;
-  border:3px solid #d6b25e;
-  box-shadow:0 0 35px rgba(214,178,94,0.5);
+  border:3px solid var(--gold);
+  box-shadow:0 0 35px rgba(214,178,94,.45);
   object-fit:cover;
-  object-position:50% 18%; /* поднимает лицо чуть выше, лучше кроп */
-  display:block;
+  object-position:50% 18%;
 }
 
 /* RESPONSIVE FIX */
@@ -305,8 +301,14 @@
   <img src="profile_photo.jpg" alt="Ren A. Eminli">
 </div>
   <div class="wrap">
-    <div class="hero">
-      <div>
+<div class="hero">
+
+  <div class="profile-photo">
+    <img src="profile_photo.jpg" alt="Ren A. Eminli">
+  </div>
+
+  <div class="hero-text">
+      </div>
         <div class="brandline">
           <div class="diamond"></div>
           <div class="tag">Portfolio</div>
