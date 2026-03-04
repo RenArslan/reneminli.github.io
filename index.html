@@ -5,31 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ren Eminli | Data Analyst Portfolio</title>
 <style>
-  :root{
-    --bg:#070b14;
-    --bg2:#0b1223;
-    --card:#0e1831;
-    --text:#e6edf7;
-    --muted:#9aa7bd;
-    --gold:#d6b25e;
-    --gold2:#f0d487;
-    --line:rgba(214,178,94,.22);
-    --shadow: 0 18px 55px rgba(0,0,0,.45);
-    .profile-photo {
-  position: absolute;
-  right: 40px;
-  top: 120px;
+/* PHOTO */
+.profile-photo{
+  position:absolute;
+  right:40px;
+  top:118px;
+  z-index:2;
 }
 
-.profile-photo img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #d6b25e;
-  box-shadow: 0 0 25px rgba(214,178,94,0.4);
-  object-fit: cover;
+.profile-photo img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:3px solid #d6b25e;
+  box-shadow:0 0 35px rgba(214,178,94,0.5);
+  object-fit:cover;
+  object-position:50% 18%; /* поднимает лицо чуть выше, лучше кроп */
+  display:block;
 }
+
+/* RESPONSIVE FIX */
+@media (max-width: 900px){
+  .profile-photo{
+    position:static;     /* больше не absolute */
+    margin:14px auto 0;  /* центр */
+    width:max-content;
   }
+
+  /* чтобы блок с кнопками не уезжал */
+  .hero{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .cta{
+    width:100%;
+    align-items:center;
+  }
+}
+
+@media (max-width: 520px){
+  .profile-photo img{
+    width:120px;
+    height:120px;
+  }
+}
 
   *{box-sizing:border-box}
   body{
@@ -264,7 +284,7 @@
 <body>
 <header>
    <div class="profile-photo">
-  <img src="profile.jpg" alt="Ren A. Eminli">
+  <img src="profile_photo.jpg" alt="Ren A. Eminli">
 </div>
   <div class="wrap">
     <div class="hero">
